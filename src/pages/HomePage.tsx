@@ -267,7 +267,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             </span>
             <div className="w-12 h-1 bg-[#E8B84B] rounded-full mx-auto mb-4" />
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight text-[#0B1F33] mb-4">
-              SK SERVICES &amp; SOLUTIONS <span className="text-[#12456B]">Services</span>
+              SK SERVICES <span className="text-[#C99A2E]">&amp; SOLUTIONS LTD</span>
             </h2>
             <p className="text-[#4A5A6A] text-base sm:text-lg leading-relaxed">
               Our dog patrol teams are proven to deter intruders, detect threats quickly, and provide unmatched protection for sites of every size.

@@ -175,7 +175,7 @@ ON CONFLICT (id) DO UPDATE SET
 
 INSERT INTO public.testimonials (name, quote, rating, role, image_url)
 VALUES
-('Teresia Dua', 'Professional company, great advice and really competitive prices , k9 security protection looked after my property of 6 acres which has a large amount of storage on it ,when there was a gathering of travellers in the area great job thank you.', 5, 'Property Owner', '/images/Team-4.jpg'),
+('Teresia Dua', 'Professional company, great advice and really competitive prices. SK Services & Solutions Ltd looked after my property of 6 acres which has a large amount of storage on it, when there was a gathering of travellers in the area. Great job, thank you.', 5, 'Property Owner', '/images/Team-4.jpg'),
 ('Thomas Edwards', 'Brilliant company, we have been using them for a while now and we have had no issues at all. Everyone has been very professional and always work to very high standards. Would definitely recommend to other companies who are looking for a professional security provider.', 5, 'Commercial Director', '/images/Testimonial-4.jpg'),
 ('Anne Frankline', 'Always prepared to adapt to the requirements at the time, time keeping was spot on and always friendly and approachable. Will definitely use again and would highly recommend.', 5, 'Site Manager', '/images/Testimonial-3-1.jpg'),
 ('Frankline', 'I currently sub work from SK Services & Solutions Ltd, and I can honestly say I’ve not suffered any issues with them yet. Pay is always on time, if not early, any issues are sorted immediately, the boss is a really nice, genuine guy, who has worked the profession himself for many years so knows the score.', 5, 'Security Contractor', '/images/Testimonial-1.jpg')

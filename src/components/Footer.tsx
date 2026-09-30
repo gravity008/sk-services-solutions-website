@@ -173,8 +173,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
         {/* Copyright notice */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-400 gap-4">
-          <p>
-            <span className="font-semibold text-zinc-200">{COMPANY_INFO.name}</span> Copyright &copy; {new Date().getFullYear()} All rights reserved
+          <p className="text-center sm:text-left">
+            &copy; {new Date().getFullYear()} {COMPANY_INFO.name}. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <button

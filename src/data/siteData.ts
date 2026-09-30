@@ -3,9 +3,9 @@ import { ServiceItem, TestimonialItem, SectorItem } from '../types';
 export const COMPANY_INFO = {
   name: 'SK Services & Solutions Ltd',
   tagline: 'Static & Dog Handling Security Services',
-  phone: '07824798780',
-  phoneDisplay: '07824798780',
-  email: 'info@k9windprotection.co.uk',
+  phone: '+44 7830 998699',
+  phoneDisplay: '+44 7830 998699',
+  email: 'info@skservicesandsolutions.co.uk',
   address: '21 Elmcroft Close, Feltham, TW14 9HH',
   postcode: 'TW14 9HH',
   location: '21 Elmcroft Close, Feltham, TW14 9HH, UK',
@@ -94,7 +94,7 @@ export const TESTIMONIALS_LIST: TestimonialItem[] = [
     id: '1',
     author: 'Teresia Dua',
     quote:
-      'Professional company, great advice and really competitive prices , k9 security protection looked after my property of 6 acres which has a large amount of storage on it ,when there was a gathering of travellers in the area great job thank you.',
+      'Professional company, great advice and really competitive prices. SK Services & Solutions Ltd looked after my property of 6 acres which has a large amount of storage on it, when there was a gathering of travellers in the area. Great job, thank you.',
     image: '/images/Team-4.jpg',
   },
   {

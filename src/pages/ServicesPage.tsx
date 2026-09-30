@@ -51,8 +51,8 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
             <span>/</span>
             <span>Services</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black uppercase tracking-tight text-white drop-shadow">
-            SK SERVICES &amp; SOLUTIONS <span className="text-[#E8B84B]">Services</span>
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-black uppercase tracking-tight text-white drop-shadow">
+            SK SERVICES <span className="text-[#E8B84B]">&amp; SOLUTIONS LTD</span>
           </h1>
           <div className="w-12 h-1 bg-[#E8B84B] rounded-full mx-auto mt-4 mb-4" />
           <p className="max-w-2xl mx-auto text-zinc-200 text-base leading-relaxed">
