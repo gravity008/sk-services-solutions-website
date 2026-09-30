@@ -1,0 +1,383 @@
+@import "tailwindcss";
+
+:root {
+  --color-navy: #12456B;
+  --color-navy-dark: #0B2A45;
+  --color-gold: #E8B84B;
+  --color-gold-dark: #C99A2E;
+  --color-white: #FFFFFF;
+  --color-bg-light: #F5F7FA;
+  --color-text-main: #0B1F33;
+  --color-text-muted: #4A5A6A;
+  --color-border: #E2E8F0;
+}
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--color-white);
+    color: var(--color-text-main);
+    overflow-x: hidden;
+    line-height: 1.65;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', system-ui, sans-serif;
+    font-weight: 700;
+    color: var(--color-text-main);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Reusable Button Classes */
+.btn-gold-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #E8B84B;
+  color: #0B1F33;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.875rem 1.75rem;
+  border-radius: 0.75rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(232, 184, 75, 0.25);
+  cursor: pointer;
+  border: 2px solid #E8B84B;
+}
+
+.btn-gold-primary:hover {
+  background-color: #C99A2E;
+  border-color: #C99A2E;
+  color: #0B1F33;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(201, 154, 46, 0.35);
+}
+
+.btn-navy-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: #0B1F33;
+  border: 2px solid #12456B;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.875rem 1.75rem;
+  border-radius: 0.75rem;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.btn-navy-outline:hover {
+  background-color: #12456B;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(18, 69, 107, 0.2);
+}
+
+.btn-white-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.875rem 1.75rem;
+  border-radius: 0.75rem;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.btn-white-outline:hover {
+  background-color: #FFFFFF;
+  color: #0B1F33;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* Hero Navy Background with subtle radial glow and faint dot-grid */
+.bg-hero-navy {
+  background-color: #0B1F33;
+  background-image: 
+    radial-gradient(circle at 25% 45%, rgba(18, 50, 79, 0.75) 0%, rgba(11, 31, 51, 0) 65%),
+    radial-gradient(circle at 75% 60%, rgba(18, 69, 107, 0.25) 0%, rgba(11, 31, 51, 0) 50%),
+    radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 32px 32px;
+}
+
+/* ============================================================ */
+/* Interactive Cards - Navy Hover Effect Across All Card Grids  */
+/* ============================================================ */
+.clean-card {
+  background-color: #FFFFFF;
+  border-radius: 0.75rem; /* 12px */
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 2px 8px rgba(11, 31, 51, 0.04);
+  transition: background-color 300ms ease, border-color 300ms ease, color 300ms ease, transform 300ms ease, box-shadow 300ms ease;
+  position: relative;
+}
+
+/* Ensure smooth 300ms transition on all child elements for contrast safety */
+.clean-card h3,
+.clean-card h4,
+.clean-card h5,
+.clean-card p,
+.clean-card strong,
+.clean-card span,
+.clean-card div,
+.clean-card svg,
+.clean-card button,
+.clean-card a,
+.clean-card img {
+  transition: color 300ms ease, background-color 300ms ease, border-color 300ms ease, filter 300ms ease, box-shadow 300ms ease, transform 300ms ease;
+}
+
+/* Hover transitions strictly active on pointer/mouse devices */
+@media (hover: hover) and (pointer: fine) {
+  .clean-card:hover {
+    background-color: #12456B !important;
+    border-color: #1A5682 !important;
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(18, 69, 107, 0.28);
+  }
+
+  /* Headings turn pure white */
+  .clean-card:hover h3,
+  .clean-card:hover h4,
+  .clean-card:hover h5,
+  .clean-card:hover .card-title,
+  .clean-card:hover .card-value {
+    color: #FFFFFF !important;
+  }
+
+  /* Description and body paragraphs turn crisp white */
+  .clean-card:hover p,
+  .clean-card:hover .card-desc {
+    color: #FFFFFF !important;
+  }
+
+  /* Strong and bold labels turn white */
+  .clean-card:hover strong,
+  .clean-card:hover .card-strong {
+    color: #FFFFFF !important;
+  }
+
+  /* Subtitles, labels, and metadata turn bright */
+  .clean-card:hover .card-label,
+  .clean-card:hover span.text-muted,
+  .clean-card:hover span[class*="text-[#4A5A6A]"],
+  .clean-card:hover span[class*="text-zinc-400"],
+  .clean-card:hover span[class*="text-slate-400"] {
+    color: #E2E8F0 !important;
+  }
+
+  /* Inner divider lines turn subtle light white */
+  .clean-card:hover .border-t,
+  .clean-card:hover .border-slate-100,
+  .clean-card:hover .border-slate-200 {
+    border-color: rgba(255, 255, 255, 0.18) !important;
+  }
+
+  /* Icon containers become lighter and luminous */
+  .clean-card:hover .card-icon-box,
+  .clean-card:hover div[class*="bg-slate-100"],
+  .clean-card:hover div[class*="bg-amber-50"] {
+    background-color: rgba(255, 255, 255, 0.18) !important;
+    border-color: rgba(255, 255, 255, 0.35) !important;
+  }
+
+  /* SVG Icons turn brighter white */
+  .clean-card:hover .card-icon-box svg,
+  .clean-card:hover div[class*="bg-amber-50"] svg,
+  .clean-card:hover svg.text-\[\#C99A2E\],
+  .clean-card:hover svg.text-\[\#12456B\],
+  .clean-card:hover svg.text-slate-300 {
+    color: #FFFFFF !important;
+    stroke: #FFFFFF !important;
+  }
+
+  /* Sector PNG icons only (not card photos) invert to crisp white on dark navy */
+  .clean-card:hover .card-icon-img,
+  .clean-card:hover .sector-icon img {
+    filter: brightness(0) invert(1) !important;
+  }
+
+  /* Retain gold stars on testimonials */
+  .clean-card:hover svg.fill-\[\#E8B84B\] {
+    color: #E8B84B !important;
+    fill: #E8B84B !important;
+    stroke: #E8B84B !important;
+  }
+
+  /* Initials circle in testimonials gets a crisp ring */
+  .clean-card:hover .author-avatar,
+  .clean-card:hover div[class*="bg-[#12456B]"] {
+    background-color: #0B2A45 !important;
+    box-shadow: 0 0 0 2px #E8B84B !important;
+  }
+
+  /* Buttons keep gold color but get slightly brighter border & background to pop on navy */
+  .clean-card:hover button.card-btn,
+  .clean-card:hover button[class*="bg-[#E8B84B]"] {
+    background-color: #F3C65E !important;
+    border: 1.5px solid #FFE885 !important;
+    color: #0B1F33 !important;
+    box-shadow: 0 4px 18px rgba(243, 198, 94, 0.4) !important;
+  }
+
+  .clean-card:hover button[class*="bg-[#E8B84B]"]:hover {
+    background-color: #E8B84B !important;
+    border-color: #FFFFFF !important;
+  }
+
+  .clean-card:hover button[class*="bg-[#E8B84B]"] svg {
+    color: #0B1F33 !important;
+    stroke: #0B1F33 !important;
+  }
+}
+
+/* ============================================================ */
+/* Service Cards: Image ALWAYS visible, ONLY lower body turns navy */
+/* ============================================================ */
+.service-card {
+  background-color: #FFFFFF;
+  border-radius: 0.75rem; /* 12px */
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 2px 8px rgba(11, 31, 51, 0.04);
+  transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card-body {
+  background-color: #FFFFFF;
+  transition: background-color 300ms ease, color 300ms ease;
+}
+
+.service-card-body h3,
+.service-card-body p,
+.service-card-body button,
+.service-card-body svg {
+  transition: color 300ms ease, background-color 300ms ease, border-color 300ms ease, box-shadow 300ms ease, transform 300ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(18, 69, 107, 0.25);
+    border-color: #12456B;
+  }
+
+  /* ONLY the lower content section turns navy blue */
+  .service-card:hover .service-card-body {
+    background-color: #12456B !important;
+  }
+
+  /* Heading turns crisp white */
+  .service-card:hover .service-card-body h3,
+  .service-card:hover .service-card-body .card-title {
+    color: #FFFFFF !important;
+  }
+
+  /* Description text turns crisp white */
+  .service-card:hover .service-card-body p,
+  .service-card:hover .service-card-body .card-desc {
+    color: #FFFFFF !important;
+  }
+
+  /* Button keeps gold color and gets a brighter border & background to pop against navy */
+  .service-card:hover .service-card-body button.card-btn {
+    background-color: #F3C65E !important;
+    border: 1.5px solid #FFE885 !important;
+    color: #0B1F33 !important;
+    box-shadow: 0 4px 18px rgba(243, 198, 94, 0.4) !important;
+  }
+
+  .service-card:hover .service-card-body button.card-btn:hover {
+    background-color: #E8B84B !important;
+    border-color: #FFFFFF !important;
+  }
+
+  .service-card:hover .service-card-body button.card-btn svg {
+    color: #0B1F33 !important;
+    stroke: #0B1F33 !important;
+  }
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Hero Zoom animation */
+@keyframes heroZoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.hero-subtle-zoom {
+  animation: heroZoom 20s ease-in-out infinite;
+  transform-origin: center 25%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-subtle-zoom {
+    animation: none !important;
+    transform: scale(1) !important;
+  }
+  .animate-marquee {
+    animation-duration: 60s;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #12456B;
+}
