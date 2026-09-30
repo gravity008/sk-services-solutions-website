@@ -1,0 +1,228 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" width="100%" height="100%">
+  <!-- Definitions for colors and shared styles -->
+  <defs>
+    <style>
+      .gold-fill { fill: #BA8C37; }
+      .gold-stroke { stroke: #BA8C37; }
+      .navy-fill { fill: #0A192F; }
+      .white-fill { fill: #FFFFFF; }
+      .font-sub {
+        font-family: 'Montserrat', 'Arial Black', sans-serif;
+        font-weight: 800;
+        fill: #0A192F;
+      }
+    </style>
+  </defs>
+
+  <!-- ========================================== -->
+  <!-- EAGLE AND SHIELD EMBLEM (Left side: x: 30-380, y: 70-360) -->
+  <!-- ========================================== -->
+  <g id="eagle-shield-emblem" transform="translate(40, 20)">
+    <!-- 1. SHIELD -->
+    <!-- Outer Shield Border -->
+    <path d="M 120 220 
+             L 240 220 
+             Q 256 220 256 236 
+             L 256 280 
+             C 256 345, 180 380, 180 395 
+             C 180 380, 104 345, 104 280 
+             L 104 236 
+             Q 104 220 120 220 Z" 
+          fill="none" stroke="#BA8C37" stroke-width="8" stroke-linejoin="round" />
+
+    <!-- Inner Shield (Filled with Gold) -->
+    <path d="M 124 232 
+             L 236 232 
+             Q 245 232 245 242 
+             L 245 278 
+             C 245 334, 180 366, 180 380 
+             C 180 366, 115 334, 115 278 
+             L 115 242 
+             Q 115 232 124 232 Z" 
+          fill="#BA8C37" stroke="#BA8C37" stroke-width="2" />
+
+    <!-- White Star inside Shield -->
+    <!-- 5-pointed star centered around x: 180, y: 315 -->
+    <polygon points="180,296 185,310 199,310 188,319 192,333 180,324 168,333 172,319 161,310 175,310" 
+             fill="#FFFFFF" />
+
+    <!-- 2. EAGLE TAIL FEATHERS (Spreading downward behind talons/top of shield) -->
+    <!-- Middle tail feathers fan downwards overlapping shield top -->
+    <path d="M 175 205 L 180 260 L 185 205 Z" fill="#FFFFFF" />
+    <path d="M 166 205 L 168 252 L 176 255 L 174 205 Z" fill="#FFFFFF" />
+    <path d="M 186 205 L 184 255 L 192 252 L 194 205 Z" fill="#FFFFFF" />
+    <path d="M 158 205 L 157 242 L 166 247 L 165 205 Z" fill="#FFFFFF" />
+    <path d="M 195 205 L 194 247 L 203 242 L 202 205 Z" fill="#FFFFFF" />
+    <path d="M 150 205 L 148 230 L 156 235 L 156 205 Z" fill="#FFFFFF" />
+    <path d="M 204 205 L 204 235 L 212 230 L 210 205 Z" fill="#FFFFFF" />
+
+    <!-- 3. EAGLE WINGS & BODY -->
+    <!-- Left Wing Outer Primaries -->
+    <g fill="#BA8C37">
+      <!-- Feather 1 (lowest left) -->
+      <path d="M 148 200 C 130 196, 95 185, 78 172 C 72 167, 75 163, 83 165 C 105 171, 136 179, 150 186 Z" />
+      <!-- Feather 2 -->
+      <path d="M 152 186 C 130 178, 80 160, 60 142 C 54 136, 58 132, 66 135 C 92 144, 130 158, 153 169 Z" />
+      <!-- Feather 3 -->
+      <path d="M 154 169 C 130 156, 75 135, 52 110 C 47 104, 52 100, 60 104 C 88 116, 132 136, 156 150 Z" />
+      <!-- Feather 4 -->
+      <path d="M 156 150 C 132 134, 76 108, 52 78 C 47 72, 53 68, 62 72 C 92 88, 135 114, 160 132 Z" />
+      <!-- Feather 5 (Top outer tip) -->
+      <path d="M 160 132 C 138 114, 88 82, 68 48 C 64 41, 70 38, 80 43 C 108 61, 145 92, 166 114 Z" />
+      <!-- Feather 6 (Top high curve) -->
+      <path d="M 166 114 C 150 96, 110 65, 96 36 C 92 29, 100 27, 108 33 C 130 52, 160 80, 174 100 Z" />
+      <!-- Feather 7 (Inner top) -->
+      <path d="M 174 100 C 165 85, 136 58, 128 35 C 125 29, 134 28, 140 34 C 155 52, 172 75, 180 94 Z" />
+
+      <!-- Left Wing Inner Secondary Rows & Wing Body -->
+      <path d="M 178 95 C 160 115, 145 138, 135 165 C 128 185, 132 205, 155 208 C 168 208, 178 198, 182 188 C 185 178, 186 160, 188 145 Z" />
+      <path d="M 145 145 C 130 148, 105 135, 95 125 C 92 122, 95 119, 100 120 C 112 124, 135 134, 145 140 Z" />
+      <path d="M 148 165 C 132 168, 110 158, 102 150 C 99 147, 102 144, 107 145 C 120 149, 138 156, 148 160 Z" />
+      <path d="M 152 185 C 138 188, 120 180, 114 174 C 111 171, 114 168, 119 169 C 128 172, 142 178, 150 181 Z" />
+    </g>
+
+    <!-- Right Wing Outer Primaries (Symmetrical Mirror) -->
+    <g fill="#BA8C37">
+      <!-- Feather 1 (lowest right) -->
+      <path d="M 212 200 C 230 196, 265 185, 282 172 C 288 167, 285 163, 277 165 C 255 171, 224 179, 210 186 Z" />
+      <!-- Feather 2 -->
+      <path d="M 208 186 C 230 178, 280 160, 300 142 C 306 136, 302 132, 294 135 C 268 144, 230 158, 207 169 Z" />
+      <!-- Feather 3 -->
+      <path d="M 206 169 C 230 156, 285 135, 308 110 C 313 104, 308 100, 300 104 C 272 116, 228 136, 204 150 Z" />
+      <!-- Feather 4 -->
+      <path d="M 204 150 C 228 134, 284 108, 308 78 C 313 72, 307 68, 298 72 C 268 88, 225 114, 200 132 Z" />
+      <!-- Feather 5 (Top outer tip) -->
+      <path d="M 200 132 C 222 114, 272 82, 292 48 C 296 41, 290 38, 280 43 C 252 61, 215 92, 194 114 Z" />
+      <!-- Feather 6 (Top high curve) -->
+      <path d="M 194 114 C 210 96, 250 65, 264 36 C 268 29, 260 27, 252 33 C 230 52, 200 80, 186 100 Z" />
+      <!-- Feather 7 (Inner top) -->
+      <path d="M 186 100 C 195 85, 224 58, 232 35 C 235 29, 226 28, 220 34 C 205 52, 188 75, 180 94 Z" />
+
+      <!-- Right Wing Inner Secondary Rows & Wing Body -->
+      <path d="M 182 95 C 200 115, 215 138, 225 165 C 232 185, 228 205, 205 208 C 192 208, 182 198, 178 188 C 175 178, 174 160, 172 145 Z" />
+      <path d="M 215 145 C 230 148, 255 135, 265 125 C 268 122, 265 119, 260 120 C 248 124, 225 134, 215 140 Z" />
+      <path d="M 212 165 C 228 168, 250 158, 258 150 C 261 147, 258 144, 253 145 C 240 149, 222 156, 212 160 Z" />
+      <path d="M 208 185 C 222 188, 240 180, 246 174 C 249 171, 246 168, 241 169 C 232 172, 218 178, 210 181 Z" />
+    </g>
+
+    <!-- 4. EAGLE HEAD & BREAST -->
+    <!-- Torso and Neck Plumage -->
+    <g fill="#BA8C37">
+      <!-- Breast chevrons / feathers -->
+      <path d="M 172 130 C 168 145, 165 170, 168 190 C 172 202, 188 202, 192 190 C 195 170, 192 145, 188 130 Z" />
+      <!-- Chest feather details (white cutouts) -->
+      <path d="M 175 152 L 180 162 L 185 152 L 182 146 L 180 150 L 178 146 Z" fill="#FFFFFF" />
+      <path d="M 172 168 L 180 180 L 188 168 L 184 164 L 180 170 L 176 164 Z" fill="#FFFFFF" />
+      <path d="M 174 186 L 180 196 L 186 186 L 183 182 L 180 186 L 177 182 Z" fill="#FFFFFF" />
+
+      <!-- Neck ruff feathers -->
+      <path d="M 170 115 L 165 125 L 172 127 L 168 136 L 176 137 L 173 147 L 180 145 L 187 147 L 184 137 L 192 136 L 188 127 L 195 125 L 190 115 Z" fill="#FFFFFF" />
+
+      <!-- Eagle Head (facing left) -->
+      <!-- Head shape with hooked beak and crest -->
+      <path d="M 183 80 
+               C 183 74, 180 66, 175 66 
+               C 170 66, 164 70, 159 74 
+               C 152 78, 144 80, 140 85 
+               C 138 88, 143 90, 148 90 
+               C 151 90, 154 88, 156 93 
+               C 160 102, 165 110, 174 114 
+               C 181 114, 186 108, 188 100 
+               C 190 92, 188 85, 183 80 Z" />
+
+      <!-- Beak (Hooked sharp curve) -->
+      <path d="M 152 79 C 145 80, 137 84, 135 88 C 134 91, 139 92, 144 91 C 148 90, 152 87, 155 83 Z" fill="#BA8C37" />
+
+      <!-- Eye (White surround with sharp black dot pupil) -->
+      <ellipse cx="165" cy="80" rx="3.5" ry="2.5" fill="#FFFFFF" />
+      <circle cx="165" cy="80" r="1.5" fill="#0A192F" />
+
+      <!-- Mouth line slit -->
+      <path d="M 142 88 L 158 86" stroke="#0A192F" stroke-width="1.2" stroke-linecap="round" />
+    </g>
+
+    <!-- 5. TALONS (Clawing top rim of shield) -->
+    <!-- Left foot (3 claws) -->
+    <g fill="#BA8C37" stroke="#0A192F" stroke-width="1.2">
+      <path d="M 148 214 Q 146 226 150 228 Q 153 222 153 214 Z" />
+      <path d="M 153 213 Q 152 227 157 228 Q 159 221 158 213 Z" />
+      <path d="M 158 214 Q 159 226 164 227 Q 164 220 162 214 Z" />
+    </g>
+    <!-- Right foot (3 claws) -->
+    <g fill="#BA8C37" stroke="#0A192F" stroke-width="1.2">
+      <path d="M 198 214 Q 196 220 196 227 Q 201 226 202 214 Z" />
+      <path d="M 202 213 Q 201 221 203 228 Q 208 227 207 213 Z" />
+      <path d="M 207 214 Q 207 222 210 228 Q 214 226 212 214 Z" />
+    </g>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- TEXT SECTION (Right side)                  -->
+  <!-- ========================================== -->
+  <!-- 1. "SK" (Massive Gold Letterforms) -->
+  <g id="letters-sk" transform="translate(420, 100)">
+    <!-- Letter 'S' -->
+    <path d="M 45 42 
+             C 45 16, 75 0, 115 0 
+             L 180 0 
+             Q 198 0, 198 18 
+             L 198 28 
+             Q 198 38, 180 38 
+             L 125 38 
+             C 98 38, 88 46, 88 56 
+             C 88 68, 102 74, 130 80 
+             L 155 86 
+             C 192 95, 206 112, 206 138 
+             C 206 166, 175 180, 132 180 
+             L 60 180 
+             Q 42 180, 42 162 
+             L 42 152 
+             Q 42 142, 60 142 
+             L 122 142 
+             C 150 142, 160 134, 160 124 
+             C 160 112, 146 106, 118 100 
+             L 94 94 
+             C 60 86, 45 68, 45 42 Z" 
+          fill="#BA8C37" />
+
+    <!-- Letter 'K' -->
+    <path d="M 226 0 
+             L 268 0 
+             Q 276 0, 276 8 
+             L 276 172 
+             Q 276 180, 268 180 
+             L 226 180 
+             Q 218 180, 218 172 
+             L 218 8 
+             Q 218 0, 226 0 Z 
+             M 276 96 
+             L 370 12 
+             Q 376 6, 386 6 
+             L 428 6 
+             Q 436 6, 434 14 
+             L 332 104 
+             L 444 168 
+             Q 452 173, 446 180 
+             L 398 180 
+             Q 390 180, 384 174 
+             L 292 118 
+             L 276 132 Z" 
+          fill="#BA8C37" />
+  </g>
+
+  <!-- 2. "SERVICES & SOLUTIONS LTD" (Deep Navy Bold Sans) -->
+  <text x="440" y="328" 
+        font-family="'Montserrat', 'Inter', -apple-system, sans-serif" 
+        font-size="28" 
+        font-weight="900" 
+        letter-spacing="0.5" 
+        fill="#0A192F">SERVICES &amp; SOLUTIONS LTD</text>
+
+  <!-- 3. "S E C U R I T Y" (Deep Navy Spaced Sans) -->
+  <text x="442" y="375" 
+        font-family="'Montserrat', 'Inter', -apple-system, sans-serif" 
+        font-size="34" 
+        font-weight="900" 
+        letter-spacing="22" 
+        fill="#0A192F">SECURITY</text>
+</svg>
