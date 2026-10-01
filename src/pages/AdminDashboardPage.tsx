@@ -27,6 +27,7 @@ import {
   EyeOff,
   X,
   FileText,
+  Upload,
 } from 'lucide-react';
 import {
   getSupabaseClient,
@@ -1219,17 +1220,54 @@ CREATE POLICY "Admins can delete testimonials" ON public.testimonials FOR DELETE
 
               <div>
                 <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-300 mb-1.5">
-                  Image URL / Asset Path
+                  Service Image (Select Exact File or Enter Asset Path)
                 </label>
-                <input
-                  type="text"
-                  value={editingService.image_url || ''}
-                  onChange={(e) =>
-                    setEditingService({ ...editingService, image_url: e.target.value })
-                  }
-                  placeholder="/images/Security-Guards.webp or https://..."
-                  className="w-full px-3.5 py-2.5 bg-[#061524] border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-[#E8B84B]"
-                />
+                <div className="flex flex-col sm:flex-row gap-2">
+                  <input
+                    type="text"
+                    value={editingService.image_url || ''}
+                    onChange={(e) =>
+                      setEditingService({ ...editingService, image_url: e.target.value })
+                    }
+                    placeholder="/images/Eviction-Bailiff-Support.webp or data:image..."
+                    className="flex-1 px-3.5 py-2.5 bg-[#061524] border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-[#E8B84B] text-xs font-mono"
+                  />
+                  <label className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-600 text-xs font-bold text-white cursor-pointer transition-colors shrink-0">
+                    <Upload className="w-3.5 h-3.5 text-[#E8B84B]" />
+                    <span>Upload Exact File</span>
+                    <input
+                      type="file"
+                      accept="image/*"
+                      className="hidden"
+                      onChange={(e) => {
+                        const file = e.target.files?.[0];
+                        if (file) {
+                          const reader = new FileReader();
+                          reader.onload = (event) => {
+                            if (event.target?.result) {
+                              setEditingService({
+                                ...editingService,
+                                image_url: event.target.result as string,
+                              });
+                              notify('Image loaded directly from your device file!');
+                            }
+                          };
+                          reader.readAsDataURL(file);
+                        }
+                      }}
+                    />
+                  </label>
+                </div>
+                {editingService.image_url && (
+                  <div className="mt-2.5 relative h-28 w-44 rounded-lg overflow-hidden border border-slate-700 bg-slate-900">
+                    <img
+                      src={editingService.image_url}
+                      alt="Preview"
+                      className="w-full h-full object-cover"
+                      style={{ objectPosition: 'center top' }}
+                    />
+                  </div>
+                )}
               </div>
 
               <div className="grid grid-cols-2 gap-4">

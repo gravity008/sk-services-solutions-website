@@ -159,12 +159,12 @@ USING (true);
 
 INSERT INTO public.services (id, title, description, icon, image_url, "order", is_active)
 VALUES
-('security-guards', 'Security Guards', 'Professional, SIA-licensed security guards providing reliable on-site protection and peace of mind.', 'Shield', '/images/Security-Guards.webp', 1, true),
-('gatehouse-security', 'Gatehouse Security', 'Dedicated gatehouse officers controlling site access, monitoring visitors, and ensuring secure entry points.', 'Building2', '/images/Gatehouse-Security.webp', 2, true),
-('security-dog-services', 'Security Dog Services', 'Professional NASDU-certified security dogs and handlers providing reliable protection for all environments.', 'Dog', '/images/Security-Dog-Services.webp', 3, true),
+('eviction-bailiff-support-services', 'Eviction and Bailiff Support Services', 'Professional and compliant security support for land, property, and legal enforcement operations.', 'ShieldCheck', '/images/Eviction-Bailiff-Support.webp', 1, true),
+('security-guards', 'Security Guards', 'Professional, SIA-licensed security guards providing reliable on-site protection and peace of mind.', 'Shield', '/images/Security-Guards.webp', 2, true),
+('gatehouse-security', 'Gatehouse Security', 'Dedicated gatehouse officers controlling site access, monitoring visitors, and ensuring secure entry points.', 'Building2', '/images/Gatehouse-Security.webp', 3, true),
 ('construction-site-security-dogs', 'Construction Site Security Dogs', 'Trained guard dogs deterring theft, vandalism, and trespassing on construction projects of every size.', 'HardHat', '/images/Construction-Site-Security-Dogs.webp', 4, true),
 ('k9-security-services', 'K9 Security Services', 'Specialist K9 teams delivering tailored security solutions for businesses, properties, and private clients.', 'Award', '/images/K9-Security-Services.webp', 5, true),
-('vacant-property-security-dogs', 'Vacant Property Security Dogs', 'Proactive dog patrols safeguarding empty or disused buildings from trespassers, squatters, and damage.', 'Home', '/images/Vacant-Property-Security-Dogs.webp', 6, true)
+('vacant-property-security', 'Vacant Property Security', 'Proactive patrols safeguarding empty or disused buildings from trespassers, squatters, and damage.', 'Building2', '/images/Vacant-Property-Security.jpg', 6, true)
 ON CONFLICT (id) DO UPDATE SET
   title = EXCLUDED.title,
   description = EXCLUDED.description,

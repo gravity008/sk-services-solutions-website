@@ -101,15 +101,48 @@ export async function fetchServices(): Promise<ServiceItem[]> {
       return SERVICES_LIST;
     }
 
-    return data.map((item: any) => ({
-      id: item.id,
-      title: item.title,
-      description: item.description || '',
-      image: item.image_url || '/images/Security-Guards.webp',
-      icon: item.icon || 'Shield',
-      order: item.order ?? 0,
-      is_active: item.is_active ?? true,
-    }));
+    const mapped = data.map((item: any) => {
+      let title = item.title;
+      let description = item.description || '';
+      let image = item.image_url || '/images/Security-Guards.webp';
+      let order = item.order ?? 0;
+
+      if (
+        item.id === 'security-dog-services' ||
+        item.id === 'eviction-bailiff-support-services' ||
+        title === 'Security Dog Services'
+      ) {
+        title = 'Eviction and Bailiff Support Services';
+        description =
+          'Professional and compliant security support for land, property, and legal enforcement operations.';
+        image = '/images/Eviction-Bailiff-Support.webp';
+        order = -1;
+      } else if (
+        item.id === 'vacant-property-security-dogs' ||
+        item.id === 'vacant-property-security' ||
+        title === 'Vacant Property Security Dogs'
+      ) {
+        title = 'Vacant Property Security';
+        if (!description || description.toLowerCase().includes('dog')) {
+          description =
+            'Proactive patrols safeguarding empty or disused buildings from trespassers, squatters, and damage.';
+        }
+        image = '/images/Vacant-Property-Security.jpg';
+      }
+
+      return {
+        id: item.id === 'security-dog-services' ? 'eviction-bailiff-support-services' : item.id,
+        title,
+        description,
+        image,
+        icon: item.icon || 'Shield',
+        order,
+        is_active: item.is_active ?? true,
+      };
+    });
+
+    mapped.sort((a, b) => a.order - b.order);
+    return mapped;
   } catch (err) {
     console.error('Error fetching services:', err);
     return SERVICES_LIST;

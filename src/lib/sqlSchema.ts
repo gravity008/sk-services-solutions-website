@@ -99,14 +99,23 @@ WITH CHECK (true);
 -- ============================================================
 
 INSERT INTO public.services (id, title, description, image_url, icon, display_order, is_active)
-VALUES 
+VALUES
+  (
+    'eviction-bailiff-support-services',
+    'Eviction and Bailiff Support Services',
+    'Professional and compliant security support for land, property, and legal enforcement operations.',
+    '/images/Eviction-Bailiff-Support.webp',
+    'ShieldCheck',
+    1,
+    true
+  ),
   (
     'security-guards',
     'Security Guards',
     'Professional, SIA-licensed security guards providing reliable on-site protection and peace of mind.',
     '/images/Security-Guards.webp',
     'Shield',
-    1,
+    2,
     true
   ),
   (
@@ -115,15 +124,6 @@ VALUES
     'Dedicated gatehouse officers controlling site access, monitoring visitors, and ensuring secure entry points.',
     '/images/Gatehouse-Security.webp',
     'Building2',
-    2,
-    true
-  ),
-  (
-    'security-dog-services',
-    'Security Dog Services',
-    'Professional NASDU-certified security dogs and handlers providing reliable protection for all environments.',
-    '/images/Security-Dog-Services.webp',
-    'Dog',
     3,
     true
   ),
@@ -146,11 +146,11 @@ VALUES
     true
   ),
   (
-    'vacant-property-security-dogs',
-    'Vacant Property Security Dogs',
-    'Proactive dog patrols safeguarding empty or disused buildings from trespassers, squatters, and damage.',
-    '/images/Vacant-Property-Security-Dogs.webp',
-    'Warehouse',
+    'vacant-property-security',
+    'Vacant Property Security',
+    'Proactive patrols safeguarding empty or disused buildings from trespassers, squatters, and damage.',
+    '/images/Vacant-Property-Security.jpg',
+    'Building2',
     6,
     true
   )

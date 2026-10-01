@@ -25,6 +25,13 @@ export const COMPANY_INFO = {
 
 export const SERVICES_LIST: ServiceItem[] = [
   {
+    id: 'eviction-bailiff-support-services',
+    title: 'Eviction and Bailiff Support Services',
+    image: '/images/Eviction-Bailiff-Support.webp',
+    description:
+      'Professional and compliant security support for land, property, and legal enforcement operations.',
+  },
+  {
     id: 'security-guards',
     title: 'Security Guards',
     image: '/images/Security-Guards.webp',
@@ -35,12 +42,6 @@ export const SERVICES_LIST: ServiceItem[] = [
     title: 'Gatehouse Security',
     image: '/images/Gatehouse-Security.webp',
     description: 'Dedicated gatehouse officers controlling site access, monitoring visitors, and ensuring secure entry points.',
-  },
-  {
-    id: 'security-dog-services',
-    title: 'Security Dog Services',
-    image: '/images/Security-Dog-Services.webp',
-    description: 'Professional NASDU-certified security dogs and handlers providing reliable protection for all environments.',
   },
   {
     id: 'construction-site-security-dogs',
@@ -55,10 +56,10 @@ export const SERVICES_LIST: ServiceItem[] = [
     description: 'Specialist K9 teams delivering tailored security solutions for businesses, properties, and private clients.',
   },
   {
-    id: 'vacant-property-security-dogs',
-    title: 'Vacant Property Security Dogs',
-    image: '/images/Vacant-Property-Security-Dogs.webp',
-    description: 'Proactive dog patrols safeguarding empty or disused buildings from trespassers, squatters, and damage.',
+    id: 'vacant-property-security',
+    title: 'Vacant Property Security',
+    image: '/images/Vacant-Property-Security.jpg',
+    description: 'Proactive patrols safeguarding empty or disused buildings from trespassers, squatters, and damage.',
   },
 ];
 
@@ -129,12 +130,12 @@ export const ACCREDITATION_LOGOS = [
 ];
 
 export const SERVICE_OPTIONS = [
+  'Eviction and Bailiff Support Services',
   'Security Guards',
   'Gatehouse Security',
-  'Security Dog Services',
   'Construction Site Security Dogs',
   'K9 Security Services',
-  'Vacant Property Security Dogs',
+  'Vacant Property Security',
   'Dog Patrol Services',
   '24/7 Security Dog Services',
   'K9 Night Patrol Services',

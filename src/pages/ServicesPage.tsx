@@ -72,15 +72,65 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
               >
                 {/* 1. Top Image Container: Always visible, natural colors, never darkened/inverted */}
                 <div className="relative h-60 w-full overflow-hidden bg-slate-100 shrink-0">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).src = '/images/Security-Guards.webp';
-                    }}
-                  />
+                  {service.id === 'eviction-bailiff-support-services' || service.title === 'Eviction and Bailiff Support Services' ? (
+                    <picture>
+                      {!service.image?.startsWith('data:') && (
+                        <source srcSet={service.image?.endsWith('.webp') ? service.image : "/images/Eviction-Bailiff-Support.webp"} type="image/webp" />
+                      )}
+                      <img
+                        src={service.image || "/images/Eviction-Bailiff-Support.jpg"}
+                        alt="SK Services enforcement team conducting an eviction support operation"
+                        loading="lazy"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        style={{ objectPosition: 'center top' }}
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).src = '/images/Gatehouse-Security.webp';
+                        }}
+                      />
+                    </picture>
+                  ) : service.id === 'security-guards' || service.title === 'Security Guards' ? (
+                    <picture>
+                      {!service.image?.startsWith('data:') && (
+                        <source srcSet="/images/Security-Guards.webp" type="image/webp" />
+                      )}
+                      <img
+                        src={service.image || "/images/Security-Guards.jpg"}
+                        alt="Professional SIA-licensed security guard on duty"
+                        loading="lazy"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        style={{ objectPosition: 'center top' }}
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).src = '/images/Security-Guards.jpg';
+                        }}
+                      />
+                    </picture>
+                  ) : service.id === 'k9-security-services' || service.title === 'K9 Security Services' ? (
+                    <picture>
+                      {!service.image?.startsWith('data:') && (
+                        <source srcSet="/images/K9-Security-Services.webp" type="image/webp" />
+                      )}
+                      <img
+                        src={service.image || "/images/K9-Security-Services.jpg"}
+                        alt="German Shepherd security dog on patrol duty"
+                        loading="lazy"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        style={{ objectPosition: 'center top' }}
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).src = '/images/K9-Security-Services.jpg';
+                        }}
+                      />
+                    </picture>
+                  ) : (
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      loading="lazy"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src = '/images/Gatehouse-Security.webp';
+                      }}
+                    />
+                  )}
                 </div>
 
                 {/* 2. Lower Content Section: Transitions to navy on hover */}

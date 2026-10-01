@@ -107,41 +107,48 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
               </div>
 
               {/* Review Badge Card */}
-              <div className="mt-8 p-5 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center justify-between gap-4 max-w-md">
-                <div className="flex items-center -space-x-3 overflow-hidden shrink-0">
-                  <img
-                    src="/images/Testimonial-3.jpg"
-                    alt="Client Reviewer"
-                    className="inline-block h-11 w-11 rounded-full ring-2 ring-white object-cover shadow-sm"
-                  />
-                  <img
-                    src="/images/Testimonial-2.jpg"
-                    alt="Client Reviewer"
-                    className="inline-block h-11 w-11 rounded-full ring-2 ring-white object-cover shadow-sm"
-                  />
-                  <img
-                    src="/images/Testimonial-1.jpg"
-                    alt="Client Reviewer"
-                    className="inline-block h-11 w-11 rounded-full ring-2 ring-white object-cover shadow-sm"
-                  />
-                  <div className="inline-flex items-center justify-center h-11 w-11 rounded-full bg-[#12456B] ring-2 ring-white text-white font-bold text-xs shadow-sm">
+              <div className="mt-8 p-4 sm:p-5 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center justify-between gap-4 max-w-md w-full">
+                {/* Stacked circular initials avatars group */}
+                <div className="flex items-center -space-x-2.5 shrink-0">
+                  <div
+                    className="w-10 h-10 rounded-full bg-[#0B1F33] text-[#E8B84B] ring-2 ring-white flex items-center justify-center text-xs font-bold shadow-sm select-none"
+                    title="Client Reviewer"
+                  >
+                    TD
+                  </div>
+                  <div
+                    className="w-10 h-10 rounded-full bg-[#12456B] text-white ring-2 ring-white flex items-center justify-center text-xs font-bold shadow-sm select-none"
+                    title="Client Reviewer"
+                  >
+                    TE
+                  </div>
+                  <div
+                    className="w-10 h-10 rounded-full bg-[#1e3a5f] text-emerald-300 ring-2 ring-white flex items-center justify-center text-xs font-bold shadow-sm select-none"
+                    title="Client Reviewer"
+                  >
+                    AF
+                  </div>
+                  <div
+                    className="w-10 h-10 rounded-full bg-[#E8B84B] text-[#0B1F33] ring-2 ring-white flex items-center justify-center text-xs font-extrabold shadow-sm select-none"
+                    title="Additional Client Reviews"
+                  >
                     +
                   </div>
                 </div>
 
-                <div className="flex flex-col items-end sm:items-start text-right sm:text-left">
+                <div className="flex flex-col items-end text-right shrink-0">
                   <div className="flex items-center gap-1.5 mb-1">
                     <div className="flex items-center text-[#E8B84B]">
                       {Array.from({ length: 5 }).map((_, i) => (
                         <Star key={i} className="w-4 h-4 fill-[#E8B84B] text-[#E8B84B]" />
                       ))}
                     </div>
-                    <span className="font-extrabold text-[#0B1F33] text-sm sm:text-base">
+                    <span className="font-extrabold text-[#0B1F33] text-sm sm:text-base leading-none">
                       4.9 Star
                     </span>
                   </div>
-                  <span className="text-xs text-[#4A5A6A] font-semibold tracking-wide uppercase">
-                    Client Reviews
+                  <span className="text-[11px] font-bold text-[#4A5A6A] tracking-wider uppercase leading-none">
+                    CLIENT REVIEWS
                   </span>
                 </div>
               </div>
